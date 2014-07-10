@@ -14,11 +14,11 @@ powersub$Global_active_power <-
     as.numeric(as.character(powersub$Global_active_power))
 
 # Draw Plot
-png('plot1.png', height = 480, width = 480)
+png('plot1.png', height = 480, width = 480, bg = 'transparent')
 hist(powersub$Global_active_power, col = c('red'), fg = c('black'),
      main = 'Global Active Power', 
      xlab = 'Global Active Power (kilowatts)',
-     axes = F) 
+     axes = F)
 axis(1, at = c(0, 2, 4, 6))
 axis(2, at = c(0, 200, 400, 600, 800, 1000, 1200))
 dev.off()
